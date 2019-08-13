@@ -70,83 +70,111 @@
 <style lang="scss">
 
 
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
+        #app {
+            font-family: 'Avenir', Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 60px;
 
-.demo {
-    .glide {
-      &__slide {
-        display: flex;
-        // border: 2px solid #b2fef7;
-        // width: 200px;
-        // height: 300px;
-        width: 550px;
-        height: 450px;
-        align-items: center;
-        justify-content: center;
-        color: #aaa;
-        font-size: 36px;
-        font-weight: 600;
-        border-radius: 5px;
-        transition: all .3s;
-        opacity: .3;
-        &--active {
-          border: none;
-          color: #fff;
-           opacity: 1;
-        //  background: linear-gradient(-45deg,#8cf3e577,#0d4350);
-        //   background: linear-gradient(-45deg,#ed145b,#7b31f4);
-        //   background-color: #80cbc4;
+        .demo {
+            .glide {
+            &__slide {
+                display: flex;
+                // border: 2px solid #b2fef7;
+                // width: 200px;
+                // height: 300px;
+                width: 550px;
+                height: 450px;
+                align-items: center;
+                justify-content: center;
+                color: #aaa;
+                font-size: 36px;
+                font-weight: 600;
+                border-radius: 5px;
+                transition: all .3s;
+                opacity: .3;
+                &--active {
+                border: none;
+                color: #fff;
+                opacity: 1;
+                //  background: linear-gradient(-45deg,#8cf3e577,#0d4350);
+                //   background: linear-gradient(-45deg,#ed145b,#7b31f4);
+                //   background-color: #80cbc4;
+                }
+                }
+            }
         }
-      }
-    }
-}
 
-    .controls {
-        font-size: 30px;
-        position: absolute;
-        border: 0;
-        outline: 0;
-        padding: 10px;
-        border-radius: 3px;
-        background-color: #4f9a94;
-        color: #000000;
-        cursor: pointer;
-        width: 70px;
-        height: 70px;
-        margin: 30px;
+        .controls {
+            font-size: 30px;
+            position: absolute;
+            border: 0;
+            outline: 0;
+            padding: 10px;
+            border-radius: 3px;
+            background-color: #4f9a94;
+            color: #000000;
+            cursor: pointer;
+            width: 70px;
+            height: 70px;
+            margin: 30px;
+        }
+
+        button[data-glide-dir="<"] {
+            left: 5px;
+        }
+
+        button[data-glide-dir=">"] {
+            right: 5px;
+        }
+
+        .glide__bullet {
+            background-color: #4f9a94;
+            border-style: none;
+            color: inherit;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .glide__bullets {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+        // background-color: yellow;
+        margin-top: 30px;
+        }
+    
+
+
+    /* IPAD PRO POTRAIT */
+    @media only screen 
+    and (min-width: 1024px) 
+    and (max-width: 1366px) {
+
     }
 
-    button[data-glide-dir="<"] {
-        left: 5px;
+    /*IPAD*/
+    @media only screen and (min-device-width: 768px) 
+    and (max-device-width: 1023px) {
     }
 
-    button[data-glide-dir=">"] {
-        right: 5px;
-    }
 
-    .glide__bullet {
-        background-color: #4f9a94;
-        border-style: none;
-        color: inherit;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        margin: 10px;
-    }
-
-    .glide__bullets {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 100px;
-      // background-color: yellow;
-      margin-top: 30px;
+    /* MOBILES */
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px) {
+     
+         .glide {
+            &__slide {
+                opacity: 0.7;
+            } 
+         
+        }
     }
 
  

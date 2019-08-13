@@ -26,3 +26,30 @@ export default {
   }
 }
 </script>
+
+<style>
+
+    /* IPAD PRO POTRAIT */
+    @media only screen 
+    and (min-width: 1024px) 
+    and (max-width: 1366px) {
+
+    }
+
+    /*IPAD*/
+    @media only screen and (min-device-width: 768px) 
+    and (max-device-width: 1023px) {
+    }
+
+
+    /* MOBILES */
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px) {
+      .glide__slide {
+        width: 40px;
+        margin: 20px;
+      }
+    }
+
+</style>

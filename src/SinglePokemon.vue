@@ -1,9 +1,9 @@
-<template>
-    <div>
-        <v-flex xs12>
-            <v-card color="#212121" class="white--text">
-                    <v-card-title class="justify-center" >
-                        <div>
+<template>          
+    <v-card color="#212121" class="white--text">
+            <v-card-title class="justify-center" >
+                <v-container>
+                    <v-row>
+                        <v-col>
                             <v-card-text class="v-card_text">
                             <h2 class="display-2 font-weight-medium white--text mt-4"><v-icon left large color="#4f9b94">remove_red_eye</v-icon>WATCH THEM ALL</h2>
                             </v-card-text>
@@ -11,26 +11,20 @@
                                 <span class="display-1 font-weight-light white--text text--lighten-2"> Name:</span>
                             <span class="display-1 font-weight-bold white--text text--lighten-2 ml-2">{{pokemonName}}</span>
                             </div>
-                            <v-flex>
-                                <video flex  class="shadow" width="700px" height="500px" controls :src="singleVideo"></video>
-                            </v-flex>
+                            <v-col>
+                                <video flex id="video" lg-12 sm-6 class="shadow" width="700px" height="500px" controls :src="singleVideo"></video>
+                            </v-col>
 
                             <v-card-actions>
                                 <v-btn large @click="goToPreviousPokemon" v-if="previousButton" color="#4f9b94" class="#000000--text">PREVIOUS</v-btn>
                                 <v-btn large  @click="goToNextPokemon" v-if="nextButton" color="#4f9b94" class="#000000--text">NEXT</v-btn>
                             </v-card-actions>
-                        </div>
-
-                   
-                    </v-card-title>
-                
-            </v-card>
-            
-        </v-flex>
-    </div>
-
- 
- 
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-card-title>
+    </v-card>
+        
 </template>
 
 <script> 
@@ -161,7 +155,12 @@ import db from '@/fb'
 
 <style>
 
-    @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
+/*DESKTOP*/
+ @media only screen  and (min-device-width: 1500px)
+and (max-device-width: 2500px)  {
+    
 
     #div-pokemons {
         display: none;
@@ -202,6 +201,30 @@ import db from '@/fb'
 
     .shadow:hover {
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+    /* IPAD PRO POTRAIT */
+    @media only screen 
+    and (min-width: 1024px) 
+    and (max-width: 1366px) {
+
+    }
+
+    /*IPAD*/
+    @media only screen and (min-device-width: 768px) 
+    and (max-device-width: 1023px) {
+    }
+
+
+    /* MOBILES */
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px) {
+        #video {
+            width: 250px;
+            height: 300px;
+        }
     }
 
 </style>

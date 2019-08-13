@@ -1,51 +1,53 @@
 <template>
-    <div> 
-        <v-card class="ma-5 card" color="grey darken-3" dark max-width="400px" max-height="500px" >
-          
-            <v-card width="380px">
-                <v-layout class="300px" align-center justify-center><img :src="linksForImages" width="200px" height="200px" :class="{scaling:scaling}"/></v-layout >
-            </v-card>
-             <v-card-title class="v-card_title">
-                <v-icon left small>create</v-icon>
-                <span class="title font-weight-light">Name: </span><h3 class="title ml-2">{{pokemonName}}</h3>
-                 <h3 class="title number">{{pokemonNumber}}</h3>
-            </v-card-title>
+    <div>
+        <v-row>
+            <v-col>
+                <v-card class="ma-5 card" color="grey darken-3" dark max-width="400px" max-height="500px" >
+                    <v-card width="380px">
+                        <v-layout class="300px" align-center justify-center><img :src="linksForImages" width="200px" height="200px" :class="{scaling:scaling}"/></v-layout >
+                    </v-card>
+                    <v-card-title class="v-card_title">
+                        <v-icon left small>create</v-icon>
+                        <span class="title font-weight-light">Name: </span><h3 class="title ml-2">{{pokemonName}}</h3>
+                        <h3 class="title number">{{pokemonNumber}}</h3>
+                    </v-card-title>
 
-            <v-card-title class="v-card_title" id="ability">
-                <v-icon left small v-if="showIcon">assignment</v-icon>
-                <span class="title font-weight-light" v-if="showAbilitySpan">Ability: </span><h3 class="title ml-2">{{ability}}</h3>
-            </v-card-title>
-             
-            <v-card-actions class="v-card_actions">
-                <v-list-tile class="grow">
-                        <v-layout align-center justify-start class="v-list_title">
-                            <v-btn icon>
-                                <v-icon class="pa-0" small>star</v-icon>
-                            </v-btn>
-                            
-                            <v-btn icon>
-                                <v-icon small>thumb_up_alt</v-icon>
-                            </v-btn>
-                        
-                        </v-layout>
+                    <v-card-title class="v-card_title" id="ability">
+                        <v-icon left small v-if="showIcon">assignment</v-icon>
+                        <span class="title font-weight-light" v-if="showAbilitySpan">Ability: </span><h3 class="title ml-2">{{ability}}</h3>
+                    </v-card-title>
+                    
+                    <v-card-actions class="v-card_actions">
+                        <v-list-tile class="grow">
+                                <v-layout align-center justify-start class="v-list_title">
+                                    <v-btn icon>
+                                        <v-icon class="pa-0" small>star</v-icon>
+                                    </v-btn>
+                                    
+                                    <v-btn icon>
+                                        <v-icon small>thumb_up_alt</v-icon>
+                                    </v-btn>
+                                
+                                </v-layout>
 
-                        <v-layout align-center justify-end>
-                            <v-btn icon>
-                                <v-icon small>favorite</v-icon>
-                            </v-btn>
-                        
-                        <v-btn icon >
-                            <v-icon small>share</v-icon>
-                            </v-btn>
-                            <span class="body-1 ml-1">SHARE</span>
-                        </v-layout>
-                </v-list-tile>
-            </v-card-actions>
-
-         
-        </v-card>  
-
+                                <v-layout align-center justify-end>
+                                    <v-btn icon>
+                                        <v-icon small>favorite</v-icon>
+                                    </v-btn>
+                                
+                                <v-btn icon >
+                                    <v-icon small>share</v-icon>
+                                    </v-btn>
+                                    <span class="body-1 ml-1">SHARE</span>
+                                </v-layout>
+                        </v-list-tile>
+                    </v-card-actions>
+                </v-card> 
+            </v-col>
+        </v-row> 
     </div>
+
+    
 </template>
 
 <script>
@@ -141,6 +143,11 @@ import { EventBus } from '@/eventBus.js';
 
 <style lang="scss">
 
+/*DESKTOP*/
+ @media only screen  and (min-device-width: 1500px)
+and (max-device-width: 2500px)  {
+
+
     #align-center {
       display: flex;
       align-items: center;
@@ -191,6 +198,33 @@ import { EventBus } from '@/eventBus.js';
    .abilityClass {
        display: none;
    }
+}
+
+/* IPAD PRO POTRAIT */
+@media only screen 
+and (min-width: 1024px) 
+and (max-width: 1366px) {
+
+}
+
+/*IPAD*/
+@media only screen and (min-device-width: 768px) 
+and (max-device-width: 1023px) {
+}
+
+
+/* MOBILES */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px) {
+
+    .display-2 {
+        font-size: 35px !important;
+    }
+
+}
+
+
 
 </style>
 

@@ -103,141 +103,167 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
 
-html {
-  height: 100%;
-}
+ 
 
-#image {
-  opacity: 0.2;
-  height: 100%;
-}
+  html {
+    height: 100%;
+  }
 
-.v-card_text {
+  #image {
+    opacity: 0.2;
+    height: 100%;
+  }
+
+  .v-card_text {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      flex-direction: column;
+      align-self: center;
+  }
+
+  #pokemon-ball {
     display: flex;
-    flex-direction: column;
+    position: absolute; 
+    height: 40px;
+    width: 40px;
+    left: 48%;
+    top: 82.3%;
+  }
+
+  #wrapper-title{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 50%;                     
+    top: 50%;                        
+    transform: translate(-50%, -50%);
+  }
+
+
+  h1 {
+    color: #80ccc4;
+    display: flex;
+    position: absolute;  
+    left: 50%;                       
+    top: 75%;                      
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+  }
+
+  #h1:hover {
+    color: #b2fff7 !important;
+  }
+
+  #singlePokemonBox {
+    margin-bottom: 50px;
+  }
+
+
+  #title {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #wrap-button {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  #scoll-box {
+    background-color: #212121;
+  }
+
+    
+  .text {
+    fill: none;
+    stroke-width: 6;
+    stroke-linejoin: round;
+    stroke-dasharray: 70 330;
+    stroke-dashoffset: 0;
+    -webkit-animation: stroke 6s infinite linear;
+    animation: stroke 6s infinite linear;
+  }
+
+  .text:nth-child(5n + 1) {
+    stroke: #F2385A;
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+  }
+  .text:nth-child(5n + 2) {
+    stroke: #F5A503;
+    -webkit-animation-delay: -2.4s;
+    animation-delay: -2.4s;
+  } 
+
+  .text:nth-child(5n + 3) {
+    stroke: #E9F1DF;
+    -webkit-animation-delay: -3.6s;
+    animation-delay: -3.6s;
+  }
+
+  .text:nth-child(5n + 4) {
+    stroke: #56D9CD;
+    -webkit-animation-delay: -4.8s;
+    animation-delay: -4.8s;
+  }
+
+  .text:nth-child(5n + 5) {
+    stroke: #3AA1BF;
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+  } 
+
+  @-webkit-keyframes stroke {
+    100% {
+      stroke-dashoffset: -400;
+    }
+  }
+
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: -400;
+    }
+  }
+
+  body {
+  background: #111;
+    background-size: .2em 100%;
+    font: 7.5em/1 Open Sans, Impact;
+    margin: 0;
+  } 
+
+  svg {
+    position: absolute;
     width: 100%;
-    flex-direction: column;
-    align-self: center;
+    height: 100%;
+  }  
+
+
+/* IPAD PRO POTRAIT */
+@media only screen 
+and (min-width: 1024px) 
+and (max-width: 1366px) {
+
 }
 
-#pokemon-ball {
-  display: flex;
-  position: absolute; 
-  height: 40px;
-  width: 40px;
-  left: 58%;
-  top: 72.3%;
-}
-
-#wrapper-title{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  left: 50%;                     
-  top: 50%;                        
-  transform: translate(-50%, -50%);
+/*IPAD*/
+@media only screen and (min-device-width: 768px) 
+and (max-device-width: 1023px) {
 }
 
 
- h1 {
-  color: #80ccc4;
-  display: flex;
-  position: absolute;  
-  left: 50%;                       
-  top: 75%;                      
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
+/* MOBILES */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px) {
+
+    
+
 }
 
-#h1:hover {
-  color: #b2fff7 !important;
-}
-
-#singlePokemonBox {
-  margin-bottom: 50px;
-}
-
-
- #title {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#wrap-button {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  justify-content: center;
-} 
-
-#scoll-box {
-  background-color: #212121;
-}
-
-  
- .text {
-  fill: none;
-  stroke-width: 6;
-  stroke-linejoin: round;
-  stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
-  -webkit-animation: stroke 6s infinite linear;
-  animation: stroke 6s infinite linear;
-}
-
-.text:nth-child(5n + 1) {
-  stroke: #F2385A;
-  -webkit-animation-delay: -1.2s;
-  animation-delay: -1.2s;
-}
-.text:nth-child(5n + 2) {
-  stroke: #F5A503;
-  -webkit-animation-delay: -2.4s;
-  animation-delay: -2.4s;
-} 
-
-.text:nth-child(5n + 3) {
-  stroke: #E9F1DF;
-  -webkit-animation-delay: -3.6s;
-  animation-delay: -3.6s;
-}
-
-.text:nth-child(5n + 4) {
-  stroke: #56D9CD;
-  -webkit-animation-delay: -4.8s;
-  animation-delay: -4.8s;
-}
-
-.text:nth-child(5n + 5) {
-  stroke: #3AA1BF;
-  -webkit-animation-delay: -6s;
-  animation-delay: -6s;
-} 
-
-@-webkit-keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
-
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
-
-body {
- background: #111;
-  background-size: .2em 100%;
-  font: 7.5em/1 Open Sans, Impact;
-  margin: 0;
-} 
-
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}     
 </style>
