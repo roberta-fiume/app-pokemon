@@ -214,6 +214,9 @@ and (max-device-width: 2500px)  {
     /*IPAD*/
     @media only screen and (min-device-width: 768px) 
     and (max-device-width: 1023px) {
+        #video {
+            width: 600px;
+        }
     }
 
 
@@ -222,7 +225,7 @@ and (max-device-width: 2500px)  {
     and (min-device-width: 320px) 
     and (max-device-width: 480px) {
         #video {
-            width: 250px;
+            width: 240px;
             height: 300px;
         }
     }

@@ -161,6 +161,57 @@
     /*IPAD*/
     @media only screen and (min-device-width: 768px) 
     and (max-device-width: 1023px) {
+
+        .glide__bullet {
+            width: 7px;
+            height: 7px;
+        }
+
+        .controls {
+            font-size: 20px;
+            position: absolute;
+            border: 0;
+            outline: 0;
+            padding: 10px;
+            border-radius: 3px;
+            background-color: #4f9a94;
+            color: #000000;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+        }
+
+        .demo {
+            .glide {
+            &__slide {
+                display: flex;
+                // border: 2px solid #b2fef7;
+                // width: 200px;
+                // height: 300px;
+                width: 550px;
+                height: 450px;
+                align-items: center;
+                justify-content: center;
+                color: #aaa;
+                font-size: 36px;
+                font-weight: 600;
+                border-radius: 5px;
+                transition: all .3s;
+                opacity: 0.1;
+                &--active {
+                border: none;
+                color: #fff;
+                opacity: 1;
+                //  background: linear-gradient(-45deg,#8cf3e577,#0d4350);
+                //   background: linear-gradient(-45deg,#ed145b,#7b31f4);
+                //   background-color: #80cbc4;
+                }
+                }
+            }
+        }
+         
+       
     }
 
 
@@ -169,11 +220,41 @@
     and (min-device-width: 320px) 
     and (max-device-width: 480px) {
      
-         .glide {
-            &__slide {
-                opacity: 0.7;
-            } 
+        //  .glide {
+        //     &__slide {
+        //         opacity: 0.7;
+        //     } 
          
+        // }
+
+
+         .demo {
+            .glide {
+            &__slide {
+                display: flex;
+                // border: 2px solid #b2fef7;
+                // width: 200px;
+                // height: 300px;
+                width: 550px;
+                height: 450px;
+                align-items: center;
+                justify-content: center;
+                color: #aaa;
+                font-size: 36px;
+                font-weight: 600;
+                border-radius: 5px;
+                transition: all .3s;
+                opacity: 0.1;
+                &--active {
+                border: none;
+                color: #fff;
+                opacity: 1;
+                //  background: linear-gradient(-45deg,#8cf3e577,#0d4350);
+                //   background: linear-gradient(-45deg,#ed145b,#7b31f4);
+                //   background-color: #80cbc4;
+                }
+                }
+            }
         }
     }
 
